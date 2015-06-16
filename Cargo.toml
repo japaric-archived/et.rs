@@ -1,0 +1,17 @@
+[package]
+name = "et"
+version = "0.1.0"
+authors = ["Jorge Aparicio <japaricious@gmail.com>"]
+
+[dependencies]
+env_logger = "*"
+image = "*"
+log = "*"
+num_cpus = "*"
+time = "*"
+
+[dependencies.cast]
+git = "https://github.com/japaric/cast.rs"
+
+[profile.dev]
+debug = false
