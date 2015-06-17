@@ -1,0 +1,19 @@
+env:
+  matrix:
+  - URL=https://www.dropbox.com/sh/hz03qag74f3p6ol/AABzorWpI5M_PumX7u_JcI2ya/rust-2015-06-17-a9eda99--13f99645b12d82172e7a1f5936262c373b040cfe.tar.gz
+  global:
+    secure: S2xqdN5x/ZANYZBuQHKCK0W+3iMfXRmCMmZXO827c1yA2C26OS1nurzOxzxPLcvin8XO/QVkohOd58rYHXXehdVnPuBY4pBFTADei0Y83tBMpktzqaZuImtcQGK8zJchixjumqWQZu1n3kv3+YP5TdjZZNqdxhVVfbLgjbo0emqTWKHbZ1lkiOYzdw3KYRRHzd488eC6AWgKUtSxNZEi7IFAP8lR/XY8/+PvJNqHEV/kOysc+ZfUc4fKL8HzMdZr7GtftWSyDzF4ZQ1j/Y1c+G5nIJoOjQBwVQMJ08/vwxvdg3lkSM/o2MdPIenu1av/orOKQY52nk/q6WB2UhU76otsRHorC3KG7sXCthpH68rGgC981lX6Dm7X60fIbHrOt1m5GVekWcW6SFRVy3ZgJwyqWEtINR9ezc+m3f+X75CrFeaOQuVgIi08gTcPi6iq4HLqYnNGr8fzc/pzYupOR2yOEyjGog38hYSu/hzeV/PWKpxXD+v/LrkSMIvBDKKsPyVqniO4EZvwj7DTyXbgJ18b8/ndjbrG/B3RU3Szg6j3CnUJK7Wu47Gn3bUBS2WU3tchyeM85H3PrDPOlNEEYFP6EbJI0i3WiuxgJCB7DOMnWfh9dKvXRBKboqfPuCPxMCNmqDoQ2BjjF6Wmz181y//tZsLX2I7Gcj8PxmqRj1U=
+
+install:
+  - source install.sh
+
+script:
+  - cargo build --verbose
+  - cargo doc --verbose
+
+branches:
+  only: master
+
+notifications:
+  email:
+    on_success: never
