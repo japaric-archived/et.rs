@@ -11,6 +11,9 @@ script:
   - cargo build --verbose
   - cargo doc --verbose
 
+after_success:
+  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && bash upload-docs.sh'
+
 branches:
   only: master
 
