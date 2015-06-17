@@ -26,11 +26,13 @@ because I haven't got around to add proper rendering support.
 ## Example: Convert an RGB image to grayscale
 
 Source code: [gray.rs]
+
 Inputs: `r`, `g` and `b` are the red, green and blue channels of the image.
+
 Output: `gray` will contain the transformed grayscale image, this vector is uninitialized before
 the operation.
 
-[gray.rs]: https://github.com/japaric/et.rs/blob/master/gray.rs
+[gray.rs]: https://github.com/japaric/et.rs/blob/master/src/gray.rs
 
 Using this crate the transformation can be written in a single statement.
 
