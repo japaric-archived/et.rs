@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Mul` struct in crate `et`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Mul">
+
+    <title>et::Mul - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>et</a></p><script>window.sidebarCurrent = {name: 'Mul', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>et</a>::<wbr><a class='struct' href=''>Mul</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-3978' class='srclink' href='../src/et/main.rs.html#61-64' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Mul&lt;A, B&gt; <span class='where'>where A: UnsafeGet, B: UnsafeGet, A::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;B::Output&gt;</span>(_, _);</pre><div class='docblock'><p>Lazy element-wise multiplication</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;A, B&gt; Flops for <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;A, B&gt; <span class='where'>where A: Flops + UnsafeGet, B: Flops + UnsafeGet, A::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;B::Output&gt;</span></code></h3><div class='impl-items'><h4 id='method.flops' class='method'><code>fn <a href='#method.flops' class='fnname'>flops</a>() -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
+</div><h3 class='impl'><code>impl&lt;A, B, C&gt; Matrix for <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;A, B&gt; <span class='where'>where A: UnsafeGet, B: Matrix + UnsafeGet, A::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;B::Output, Output=C&gt;</span></code></h3><div class='impl-items'><h4 id='method.nrows' class='method'><code>fn <a href='#method.nrows' class='fnname'>nrows</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.ncols' class='method'><code>fn <a href='#method.ncols' class='fnname'>ncols</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<h4 id='method.nelems' class='method'><code>fn <a href='#method.nelems' class='fnname'>nelems</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
+<h4 id='method.size' class='method'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</a></code></h4>
+</div><h3 class='impl'><code>impl&lt;A, B, C&gt; UnsafeGet for <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;A, B&gt; <span class='where'>where A: UnsafeGet, B: UnsafeGet, A::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;B::Output, Output=C&gt;</span></code></h3><div class='impl-items'><h4 id='assoc_type.Output' class='type'><code>type Output = C</code></h4>
+<h4 id='method.unsafe_get' class='method'><code>unsafe fn <a href='#method.unsafe_get' class='fnname'>unsafe_get</a>(&amp;self, i: <a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</a>) -&gt; C</code></h4>
+</div><h3 class='impl'><code>impl&lt;A, B, C, D, E, F&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&lt;<a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;D, E&gt;&gt; for <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;A, B&gt; <span class='where'>where A: UnsafeGet, B: Matrix + UnsafeGet, A::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;B::Output, Output=C&gt;, D: UnsafeGet, E: Matrix + UnsafeGet, D::Output: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;E::Output, Output=F&gt;, C: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&lt;F&gt;</span></code></h3><div class='impl-items'><h4 id='assoc_type.Output' class='type'><code>type Output = <a class='struct' href='../et/struct.Add.html' title='et::Add'>Add</a>&lt;<a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;A, B&gt;, <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;D, E&gt;&gt;</code></h4>
+<h4 id='method.add' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/ops/trait.Add.html#method.add' class='fnname'>add</a>(self, rhs: <a class='struct' href='../et/struct.Mul.html' title='et::Mul'>Mul</a>&lt;D, E&gt;) -&gt; Self::Output</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "et";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Col` enum in crate `et`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Col">
+
+    <title>et::Col - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>et</a></p><script>window.sidebarCurrent = {name: 'Col', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>et</a>::<wbr><a class='enum' href=''>Col</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-3937' class='srclink' href='../src/et/main.rs.html#39' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Col&lt;T&gt; {}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;T&gt; <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.zeros' class='method'><code>fn <a href='#method.zeros' class='fnname'>zeros</a>(n: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;&gt; <span class='where'>where T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='http://doc.rust-lang.org/nightly/core/num/trait.Zero.html' title='core::num::Zero'>Zero</a></span></code></h4>
+<h4 id='method.iter_mut' class='method'><code>fn <a href='#method.iter_mut' class='fnname'>iter_mut</a>(&amp;mut self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/core/slice/struct.IterMut.html' title='core::slice::IterMut'>IterMut</a>&lt;T&gt;</code></h4>
+</div><h2 id='deref-methods'>Methods from <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Deref.html' title='core::ops::Deref'>Deref</a>&lt;Target=<a class='enum' href='../et/strided/enum.Col.html' title='et::strided::Col'>Col</a>&lt;T&gt;&gt;</h2><div class='impl-items'><h4 id='method.map' class='method'><code>fn <a href='#method.map' class='fnname'>map</a>&lt;F&gt;(&amp;self, f: F) -&gt; <a class='struct' href='../et/struct.Map.html' title='et::Map'>Map</a>&lt;F, &amp;Self&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(T,)</a>&gt;, T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a></span></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html' title='core::convert::AsMut'>AsMut</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T]</a>&gt; for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.as_mut' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html#method.as_mut' class='fnname'>as_mut</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a>T<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+</div><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html' title='core::convert::AsRef'>AsRef</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>[T]</a>&gt; for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.as_ref' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#method.as_ref' class='fnname'>as_ref</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>T<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+</div><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Deref.html' title='core::ops::Deref'>Deref</a> for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='assoc_type.Target' class='type'><code>type Target = <a class='enum' href='../et/strided/enum.Col.html' title='et::strided::Col'>Col</a>&lt;T&gt;</code></h4>
+<h4 id='method.deref' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/ops/trait.Deref.html#method.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class='enum' href='../et/strided/enum.Col.html' title='et::strided::Col'>Col</a>&lt;T&gt;</code></h4>
+</div><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt;</code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt; <span class='where'>where T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a></span></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl&lt;T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt; <span class='where'>where T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a></span></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl&lt;T, R&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.IndexAssign.html' title='core::ops::IndexAssign'>IndexAssign</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/core/ops/struct.RangeFull.html' title='core::ops::RangeFull'>RangeFull</a>, R&gt; for <a class='enum' href='../et/enum.Col.html' title='et::Col'>Col</a>&lt;T&gt; <span class='where'>where R: Flops + Matrix + <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> + UnsafeGet&lt;Output=T&gt;, T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a></span></code></h3><div class='impl-items'><h4 id='method.index_assign' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/ops/trait.IndexAssign.html#method.index_assign' class='fnname'>index_assign</a>(&amp;mut self, _: <a class='struct' href='http://doc.rust-lang.org/nightly/core/ops/struct.RangeFull.html' title='core::ops::RangeFull'>RangeFull</a>, rhs: R)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "et";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>

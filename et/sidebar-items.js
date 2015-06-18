@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Col",""],["Mat",""]],"mod":[["strided","\"Strided\" data structures"]],"struct":[["Add","Lazy addition"],["Map","Lazy function application"],["Mul","Lazy element-wise multiplication"]]});

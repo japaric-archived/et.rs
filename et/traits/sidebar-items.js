@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["Flops","A rough measurement of the (floating point) operations per element that will be required to evaluate this lazy expression"],["Matrix","A matrix, a rectangular array arranged in rows and columns"],["UnsafeGet","Gets an element of the collection, without performing bounds checks"]]});

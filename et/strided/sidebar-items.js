@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Col","Strided column vector"]],"mod":[["raw",""]]});
