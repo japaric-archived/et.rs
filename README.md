@@ -54,7 +54,10 @@ parfor i in 0..len
 done
 ```
 
-For a 1920x1080 image, the execution time is around 3.6 ms on my machine.
+For a 1920x1080 image, the execution time is around 3.6 ms on my (quad core) machine.
+
+As a baseline measurement, converting the same image using the `image` crate
+(`DynamicImage::to_luma`) takes ~13 ms -- this operation is single threaded though.
 
 For comparison this is how the same operation would be performed using [linalg], where the
 arithmetic operations directly map to BLAS calls.

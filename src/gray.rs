@@ -13,12 +13,20 @@ const GRAY_PATH: &'static str = "gray.jpg";
 pub fn main() {
     env_logger::init().unwrap();
 
-    let rgb = image::open(RGB_PATH).unwrap().to_rgb();
+    let rgb = image::open(RGB_PATH).unwrap();
+
+    let start = time::precise_time_ns();
+    let _ = rgb.to_luma();
+    let end = time::precise_time_ns();
+
+    let rgb = rgb.to_rgb();
 
     let (width, height) = rgb.dimensions();
     let npixels = width * height;
 
-    println!("size: {}x{}", width, height);
+    println!("Converting a {}x{} RGB image to grayscale", width, height);
+
+    println!("using `image::DynamicImage::to_luma`: {} ns", end - start);
 
     // Split in color channels
     let rgb = Mat::reshape(&rgb, (npixels, 3));
@@ -37,7 +45,7 @@ pub fn main() {
     }.map(|x| x as u8);
     let end = time::precise_time_ns();
 
-    println!("elapsed: {} ns", end - start);
+    println!("using expression templates: {} ns", end - start);
 
     ImageBuffer::<Luma<u8>, _>::from_raw(width, height, gray.as_ref())
         .unwrap()
